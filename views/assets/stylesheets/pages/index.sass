@@ -1,0 +1,82 @@
+#info
+  width: 98%
+  background-color: $block_bg_color
+  padding: 1%
+  margin-bottom: 1%
+  overflow: auto
+
+  img
+    float: left
+    margin-right: 1%
+
+  p
+    margin-left: 15%
+
+#sites
+  float: left
+  width: 66%
+  margin-right: 1%
+  overflow: auto
+
+  a
+    color: $menu_txt_color
+    text-decoration: none
+
+  .site
+    width: 112.5px
+    height: 112.5px
+    float: left
+    text-align: center
+    background-color: $block_bg_color
+    padding: 3%
+    font-size: 1.3em
+
+    &:hover
+      background-color: $block_head_hover_bg_color
+
+    .img
+      display: inline-block
+      height: 66px
+      width: 66px 
+      background-color: #688
+      border: 1px solid $border_color
+
+#last_articles
+  float: right
+  width: 33%
+  background-color: $block_bg_color
+  font-size: 100%
+
+  #last_articles_head
+    height: auto
+    background-color: $block_head_bg_color
+    color: $block_head_text_color
+    padding: 1%
+    text-align: center
+
+  .article
+    margin-bottom: 1%
+    padding: 2%
+
+    &:nth-child(n)
+      color: $main_txt_color + 100
+    &:nth-child(2)
+      color: $main_txt_color
+    &:nth-child(3)
+      color: $main_txt_color + 40
+    &:nth-child(4)
+      color: $main_txt_color + 80
+
+@media only screen and (max-width: 500px)
+  #sites
+    width: 100%
+    float: none
+    max-width: none
+    min-width:none
+
+  #last_articles
+    margin-top: 1%
+    width: 100%
+    float: none
+    max-width: none
+    min-width:none

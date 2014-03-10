@@ -1,0 +1,42 @@
+body
+  background-color: $body_bg_color
+  font-family: "Comic Sans MS", cursive, sans-serif
+  color: $main_txt_color
+
+h1, h2, h3, h4, h5, h6, p
+  margin: 0
+
+#wrapper
+  width: 95%
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  margin: auto
+  max-width: 900px
+  background-color: $main_bg_color
+
+#menubar
+  max-height: 40px
+  min-height: 25px
+  text-align: center
+  background-color: $menu_bg_color
+
+  .menu_link
+    display: inline-block
+    width: 18%
+    padding: 1%
+    color: $menu_txt_color
+    text-decoration: none
+    box-shadow: -1px 0 0 0 #999 inset
+    &:last-child
+      box-shadow: none
+
+    &:hover
+      background-color: $menu_hover_bg_color
+      transition: .3s
+      color: $menu_hover_txt_color
+
+#main
+  overflow: auto

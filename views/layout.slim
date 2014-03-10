@@ -1,0 +1,21 @@
+doctype html
+html
+
+  head
+    title MiDiSpot
+    meta http-equiv="Content-Type" content="text/html" charset='utf-8'
+    script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
+    / script src="/javascript/test.js"
+    link href="/stylesheets/main.css" media="screen" rel="stylesheet"
+
+  body
+    #wrapper
+      #menubar
+        a.menu_link href='/' = 'Главная'
+        a.menu_link href='/articles' = 'Статьи'
+        a.menu_link href='#' = 'Сайты'
+        a.menu_link href='#' = 'Проги'
+        a.menu_link href='#' = 'Контакты'
+
+      #main
+        == yield
