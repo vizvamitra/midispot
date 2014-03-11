@@ -18,28 +18,56 @@
   margin-right: 1%
   overflow: auto
 
-  a
-    color: $menu_txt_color
-    text-decoration: none
-
   .site
-    width: 112.5px
-    height: 112.5px
     float: left
-    text-align: center
-    background-color: $block_bg_color
-    padding: 3%
-    font-size: 1.3em
-
+    width: 25%
+    margin-bottom: 1%
+    
     &:hover
-      background-color: $block_head_hover_bg_color
+      .controls
+        opacity: 1
+      a.visible
+        background-color: $site_hover_bg_color
+        transition: .3s
 
-    .img
-      display: inline-block
-      height: 66px
-      width: 66px 
-      background-color: #688
-      border: 1px solid $border_color
+    a.visible
+      background-color: $block_bg_color
+      text-decoration: none
+      display: block
+      text-align: center
+      padding: 5%
+      color: $main_txt_color
+      font-size: 1.3em
+
+      img
+        width: 70%
+        height: 70%
+
+    .controls
+      overflow: auto
+      height: 20px
+      opacity: 0
+
+      .info, .articles, .github
+        width: 32%
+        height: 100%
+        padding: .5%
+        float: left
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        
+      .articles
+        background-image: url(http://icons.iconarchive.com/icons/rokey/seed/128/text-document-icon.png)
+        text-align: left
+        font-size: 0.8em
+        text-decoration: none
+        color: #000
+      .info
+        background-image: url(http://icons.iconarchive.com/icons/icojam/blueberry-basic/32/information-icon.png)
+
+      .github
+        background-image: url(http://nickbreen.ca/img/icons/github-mark.png)
 
 #last_articles
   float: right
@@ -67,12 +95,18 @@
     &:nth-child(4)
       color: $main_txt_color + 80
 
-@media only screen and (max-width: 500px)
+div.ui-tooltip
+  max-width: 600px
+
+@media only screen and (max-width: 720px)
   #sites
     width: 100%
     float: none
     max-width: none
-    min-width:none
+    min-width: none
+
+    a.visible
+      font-size: 1.1em
 
   #last_articles
     margin-top: 1%
@@ -80,3 +114,7 @@
     float: none
     max-width: none
     min-width:none
+
+@media only screen and (max-width: 480px)
+  .controls
+    opacity: 1 !important

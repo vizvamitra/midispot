@@ -4,22 +4,15 @@
   p Сайт находится на начальном этапе разработки. Весь контент - просто заглушки
 
 #sites
-  .site
-    .img
-    a href='http://vizvamitra.no-ip.biz' Todolist
-
-  .site
-    .img
-    p MiDiSpot
-  .site
-    .img
-    p Wishlist
-  .site
-    .img
-    p Djopa!
-  .site
-    .img
-    p Сайт5
+  - @sites.each do |site|
+    .site
+      a.visible href=site['link']
+        img src=site['icon']
+        p =site['name']
+      .controls
+        a.articles href="articles/#{site['tag']}" =site['num_articles']
+        a.info title==site['technologies'].map{|tech| "#{tech['type']}: <a href='#{tech['link']}'> #{tech['name']} v#{tech['version']}</a>"}.join('<br>')
+        a.github href=site['github']
 
 #last_articles
   #last_articles_head Последние статьи
