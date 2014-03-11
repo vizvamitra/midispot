@@ -6,9 +6,11 @@ html
     meta http-equiv="Content-Type" content="text/html" charset='utf-8'
     script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
     script src="/javascript/index.js"
-    link href="/stylesheets/main.css" media="screen" rel="stylesheet"
-    link rel='stylesheet' href='http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css'
     script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"
+    link href="/stylesheets/main.css" media="screen" rel="stylesheet"
+    - if @mobile
+      link href="/stylesheets/mobile.css" media="screen" rel="stylesheet"
+    link rel='stylesheet' href='http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css'
 
 
   body

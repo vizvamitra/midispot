@@ -1,4 +1,9 @@
 $ ->
+  $('.info').click ->
+    $(this).tooltip()
+    setTimeout (->
+      $(this).tooltip('close')
+    ), 1500
   $('.info').tooltip({
     events: {
       def: "click,mouseleave"
